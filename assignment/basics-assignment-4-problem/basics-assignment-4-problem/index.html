@@ -16,9 +16,14 @@
     <section id="assignment">
       <!-- 1) Fetch the user input and use it as a CSS class -->
       <!-- The entered class should be added to the below paragraph -->
-      <input type="text" />
+      <!-- 
+      v-model binds the input's value to the `className` data property.
+      This means: whatever the user types will be stored in className.
+      It also keeps the input updated if className changes from code.
+    -->
+      <input v-model="className" type="text" placeholder="user1 or user2" />
       <!-- (available classes: "user1", "user2") -->
-      <p>Style me!</p>
+      <p v-bind:class="className">Style me!</p>
       <button>Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
