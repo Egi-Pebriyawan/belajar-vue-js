@@ -34,8 +34,8 @@
       <br />
       <br />
       <!-- 3) Add dynamic inline styling to the below paragraph and let the user enter a background-color -->
-      <input type="text" />
-      <p>Style me inline!</p>
+      <input style="width: 500px; text-align: center" v-model="classBackground" placeholder="orange,red,blue,yellow ect... " type="text" />
+      <p v-bind:style="{ backgroundColor: classBackground }">Style me inline!</p>
     </section>
   </body>
 </html>

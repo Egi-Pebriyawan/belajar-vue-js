@@ -6,6 +6,7 @@ const app = Vue.createApp({
       className: "",
       onoff: "",
       saklar: "",
+      classBackground: "",
     };
   },
 
@@ -14,8 +15,10 @@ const app = Vue.createApp({
       // Function toggle, isi hidden atau visible
       if (this.saklar === "hidden") {
         this.saklar = "visible";
+        this.onoff = "hilangkan";
       } else {
         this.saklar = "hidden";
+        this.onoff = "munculkan";
       }
     },
   },
