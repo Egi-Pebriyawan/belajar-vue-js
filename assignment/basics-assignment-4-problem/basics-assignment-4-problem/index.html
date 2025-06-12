@@ -21,13 +21,18 @@
       This means: whatever the user types will be stored in className.
       It also keeps the input updated if className changes from code.
     -->
-      <input v-model="className" type="text" placeholder="user1 or user2" />
-      <!-- (available classes: "user1", "user2") -->
-      <p v-bind:class="className">Style me!</p>
-      <button>Toggle Paragraph</button>
+      <div v-bind:class="saklar">
+        <input v-model="className" type="text" placeholder="user1 or user2" />
+        <!-- (available classes: "user1", "user2") -->
+        <p v-bind:class="className">Style me!</p>
+      </div>
+
+      <button @click="toggleSaklar">Toggle Paragraph : {{onoff}}</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
 
+      <br />
+      <br />
       <!-- 3) Add dynamic inline styling to the below paragraph and let the user enter a background-color -->
       <input type="text" />
       <p>Style me inline!</p>
