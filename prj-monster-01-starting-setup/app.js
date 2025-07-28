@@ -9,6 +9,8 @@ let currentRound = 0;
 const app = Vue.createApp({
   data() {
     return {
+      gameStarted: false,
+      playerName: "",
       playerHealth: 100,
       monsterHealth: 100,
       currentRound: 0,
@@ -43,7 +45,6 @@ const app = Vue.createApp({
       } else if (value <= 0) {
         //player lost
         this.winner = "monster";
-        console.log(this.winner);
       }
     },
     monsterHealth(value) {
@@ -60,6 +61,7 @@ const app = Vue.createApp({
 
   methods: {
     startGame() {
+      this.gameStarted = true;
       this.playerHealth = 100;
       this.monsterHealth = 100;
       this.currentRound = 0;
